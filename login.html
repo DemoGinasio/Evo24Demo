@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -25,346 +25,8 @@
 </head>
 <body>
 
-    <!-- ======================== LANDING PAGE ======================== -->
-    <div id="landing-page" class="landing-page">
-        
-        <!-- Landing Navbar -->
-        <nav class="landing-nav">
-            <div class="landing-nav-inner">
-                <div class="landing-nav-brand">
-                    <div class="landing-nav-logo"><i class="fas fa-dumbbell"></i></div>
-                    <span>EVO <strong>GYM</strong></span>
-                </div>
-                <div class="landing-nav-links" id="landing-nav-links">
-                    <a href="#landing-features">Funcionalidades</a>
-                    <a href="#landing-problems">Problemas</a>
-                    <a href="#landing-plans-section">Planos</a>
-                    <a href="#landing-stats">Resultados</a>
-                </div>
-                <div class="landing-nav-actions">
-                    <a href="login.html">
-                        <button class="btn btn-landing-login" id="btn-go-login">
-                            <i class="fas fa-sign-in-alt"></i> Aceder ao Sistema
-                        </button>
-                    </a>
-                    <button class="landing-mobile-toggle" id="landing-mobile-toggle">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Hero Section -->
-        <section class="landing-hero">
-            <div class="landing-hero-bg">
-                <div class="hero-shape hero-shape-1"></div>
-                <div class="hero-shape hero-shape-2"></div>
-                <div class="hero-shape hero-shape-3"></div>
-            </div>
-            <div class="landing-hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-bolt"></i> Sistema Inteligente para Ginásios 24h
-                </div>
-                <h1 class="hero-title">
-                    Controle total do seu<br>
-                    <span class="hero-gradient-text">ginásio 24 horas</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Gestão de acessos, clientes, receita e segurança — tudo numa plataforma.
-                    Reduza perdas, aumente a retenção e automatize o seu negócio.
-                </p>
-                <div class="hero-cta">
-                    <button class="btn btn-primary btn-xl" id="btn-hero-demo">
-                        <i class="fas fa-play-circle"></i> Ver Demo ao Vivo
-                    </button>
-                    <button class="btn btn-outline btn-xl" id="btn-hero-features">
-                        <i class="fas fa-arrow-down"></i> Ver Funcionalidades
-                    </button>
-                </div>
-                <div class="hero-trust">
-                    <div class="hero-trust-item">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Acesso Seguro 24/7</span>
-                    </div>
-                    <div class="hero-trust-item">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Receita Controlada</span>
-                    </div>
-                    <div class="hero-trust-item">
-                        <i class="fas fa-bell"></i>
-                        <span>Alertas Inteligentes</span>
-                    </div>
-                </div>
-            </div>
-            <div class="landing-hero-visual">
-                <div class="hero-dashboard-preview">
-                    <div class="preview-topbar">
-                        <div class="preview-dots">
-                            <span></span><span></span><span></span>
-                        </div>
-                        <span class="preview-url">evogym.pt/dashboard</span>
-                    </div>
-                    <div class="preview-content">
-                        <div class="preview-kpi-row">
-                            <div class="preview-kpi"><span class="preview-kpi-val">127</span><span class="preview-kpi-label">Clientes</span></div>
-                            <div class="preview-kpi green"><span class="preview-kpi-val">98</span><span class="preview-kpi-label">Ativos</span></div>
-                            <div class="preview-kpi orange"><span class="preview-kpi-val">2.847€</span><span class="preview-kpi-label">Receita</span></div>
-                        </div>
-                        <div class="preview-chart">
-                            <div class="preview-bar" style="height:40%"></div>
-                            <div class="preview-bar" style="height:65%"></div>
-                            <div class="preview-bar" style="height:50%"></div>
-                            <div class="preview-bar" style="height:80%"></div>
-                            <div class="preview-bar active" style="height:95%"></div>
-                            <div class="preview-bar" style="height:70%"></div>
-                            <div class="preview-bar" style="height:55%"></div>
-                        </div>
-                        <div class="preview-alert">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <span>3 clientes a expirar esta semana</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Problems Section -->
-        <section class="landing-section landing-problems" id="landing-problems">
-            <div class="landing-container">
-                <div class="landing-section-header">
-                    <span class="section-tag"><i class="fas fa-exclamation-circle"></i> O Problema</span>
-                    <h2>Problemas reais que o seu ginásio enfrenta <span class="highlight">todos os dias</span></h2>
-                    <p>Sem um sistema inteligente, está a perder dinheiro e controlo do seu negócio.</p>
-                </div>
-                <div class="problems-grid">
-                    <div class="problem-card">
-                        <div class="problem-icon red"><i class="fas fa-user-slash"></i></div>
-                        <h3>Clientes com plano expirado</h3>
-                        <p>Membros continuam a entrar com planos vencidos. Cada acesso não pago é dinheiro perdido diretamente.</p>
-                        <div class="problem-impact"><i class="fas fa-arrow-down"></i> Perda média: <strong>200-500€/mês</strong></div>
-                    </div>
-                    <div class="problem-card">
-                        <div class="problem-icon orange"><i class="fas fa-eye-slash"></i></div>
-                        <h3>Sem controlo de quem entra</h3>
-                        <p>Amigos a entrar com cartões de outros, acessos fora de horário, sem registo de quem está no ginásio.</p>
-                        <div class="problem-impact"><i class="fas fa-arrow-down"></i> Risco: <strong>Segurança e responsabilidade</strong></div>
-                    </div>
-                    <div class="problem-card">
-                        <div class="problem-icon yellow"><i class="fas fa-file-invoice-dollar"></i></div>
-                        <h3>Gestão de pagamentos caótica</h3>
-                        <p>Pagamentos esquecidos, sem histórico claro, clientes que "acham que já pagaram".</p>
-                        <div class="problem-impact"><i class="fas fa-arrow-down"></i> Resultado: <strong>Conflitos e receita incerta</strong></div>
-                    </div>
-                    <div class="problem-card">
-                        <div class="problem-icon blue"><i class="fas fa-users-slash"></i></div>
-                        <h3>Clientes abandonam sem aviso</h3>
-                        <p>Planos expiram e ninguém contacta para renovar. Perdem-se clientes que podiam ser retidos facilmente.</p>
-                        <div class="problem-impact"><i class="fas fa-arrow-down"></i> Impacto: <strong>30% de churn evitável</strong></div>
-                    </div>
-                    <div class="problem-card">
-                        <div class="problem-icon purple"><i class="fas fa-clock"></i></div>
-                        <h3>Entradas fora do horário contratado</h3>
-                        <p>Clientes com planos limitados acedem fora das horas permitidas. Perde valor na diferenciação de planos.</p>
-                        <div class="problem-impact"><i class="fas fa-arrow-down"></i> Resultado: <strong>Planos premium desvalorizados</strong></div>
-                    </div>
-                    <div class="problem-card">
-                        <div class="problem-icon teal"><i class="fas fa-people-arrows"></i></div>
-                        <h3>Sobrelotação sem controlo</h3>
-                        <p>Horários de pico sem limites, experiência degradada, reclamações de clientes. Sem dados para gerir capacidade.</p>
-                        <div class="problem-impact"><i class="fas fa-arrow-down"></i> Efeito: <strong>Insatisfação e cancelamentos</strong></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Solution / Features Section -->
-        <section class="landing-section landing-features" id="landing-features">
-            <div class="landing-container">
-                <div class="landing-section-header">
-                    <span class="section-tag green"><i class="fas fa-check-circle"></i> A Solução</span>
-                    <h2>Uma plataforma que resolve <span class="highlight">cada problema</span></h2>
-                    <p>Cada funcionalidade foi desenhada para resolver um problema real do dia-a-dia de um ginásio.</p>
-                </div>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-door-open"></i></div>
-                        <h3>Controlo de Acesso Inteligente</h3>
-                        <p>Validação automática por RFID/QR. Bloqueia clientes expirados, regista tentativas e alerta em tempo real.</p>
-                        <ul class="feature-list">
-                            <li><i class="fas fa-check"></i> Bloqueio automático de expirados</li>
-                            <li><i class="fas fa-check"></i> Restrição horária por plano</li>
-                            <li><i class="fas fa-check"></i> Deteção de entradas duplicadas</li>
-                            <li><i class="fas fa-check"></i> Alerta de tentativas inválidas</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card featured">
-                        <div class="feature-badge">MAIS IMPACTO</div>
-                        <div class="feature-icon"><i class="fas fa-bell"></i></div>
-                        <h3>Alertas Inteligentes</h3>
-                        <p>Sistema proativo que antecipa problemas antes de acontecerem. Zero surpresas.</p>
-                        <ul class="feature-list">
-                            <li><i class="fas fa-check"></i> Planos a expirar em 3 dias</li>
-                            <li><i class="fas fa-check"></i> Deteção de acesso irregular</li>
-                            <li><i class="fas fa-check"></i> Alerta de capacidade máxima</li>
-                            <li><i class="fas fa-check"></i> Clientes inativos há 7+ dias</li>
-                            <li><i class="fas fa-check"></i> Notificação de pagamento pendente</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
-                        <h3>Dashboard de Negócio</h3>
-                        <p>Métricas em tempo real para decidir melhor. Saiba exatamente como está o seu ginásio.</p>
-                        <ul class="feature-list">
-                            <li><i class="fas fa-check"></i> Receita mensal em tempo real</li>
-                            <li><i class="fas fa-check"></i> Taxa de retenção de clientes</li>
-                            <li><i class="fas fa-check"></i> Ocupação por hora do dia</li>
-                            <li><i class="fas fa-check"></i> Gráfico de entradas semanal</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-users-cog"></i></div>
-                        <h3>Gestão Completa de Clientes</h3>
-                        <p>CRUD completo, pesquisa rápida, renovação com um clique e histórico detalhado.</p>
-                        <ul class="feature-list">
-                            <li><i class="fas fa-check"></i> Adicionar, editar, remover</li>
-                            <li><i class="fas fa-check"></i> Renovação rápida com pagamento</li>
-                            <li><i class="fas fa-check"></i> Destaque de clientes em risco</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-credit-card"></i></div>
-                        <h3>Controlo de Receita</h3>
-                        <p>Registo de pagamentos, atualização automática de estado e histórico financeiro claro.</p>
-                        <ul class="feature-list">
-                            <li><i class="fas fa-check"></i> Multibanco, MB WAY, Dinheiro</li>
-                            <li><i class="fas fa-check"></i> Ativação automática após pagamento</li>
-                            <li><i class="fas fa-check"></i> Relatório financeiro completo</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                        <h3>Segurança Avançada</h3>
-                        <p>Registo completo de quem entra, quando e com que resultado. Proteção total do espaço.</p>
-                        <ul class="feature-list">
-                            <li><i class="fas fa-check"></i> Histórico completo de acessos</li>
-                            <li><i class="fas fa-check"></i> Alerta de tentativas suspeitas</li>
-                            <li><i class="fas fa-check"></i> Controlo de capacidade do espaço</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Plans Preview Section -->
-        <section class="landing-section landing-plans-section" id="landing-plans-section">
-            <div class="landing-container">
-                <div class="landing-section-header">
-                    <span class="section-tag blue"><i class="fas fa-tags"></i> Planos Pré-configurados</span>
-                    <h2>Planos prontos para o seu <span class="highlight">ginásio</span></h2>
-                    <p>Três planos otimizados para maximizar receita e segmentar o mercado.</p>
-                </div>
-                <div class="landing-plans-grid">
-                    <div class="landing-plan-card">
-                        <div class="lp-icon" style="background:rgba(116,185,255,0.12);color:#74B9FF"><i class="fas fa-calendar-week"></i></div>
-                        <h3>3x por Semana</h3>
-                        <div class="lp-price">33€<span>/mês</span></div>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 3 sessões por semana</li>
-                            <li><i class="fas fa-check"></i> Acesso das 8h às 22h</li>
-                            <li><i class="fas fa-check"></i> Área de musculação</li>
-                        </ul>
-                    </div>
-                    <div class="landing-plan-card popular">
-                        <div class="lp-badge">MAIS POPULAR</div>
-                        <div class="lp-icon" style="background:rgba(108,92,231,0.12);color:#6C5CE7"><i class="fas fa-clock"></i></div>
-                        <h3>Acesso 6 Dias</h3>
-                        <div class="lp-price">39€<span>/mês</span></div>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 6 dias por semana</li>
-                            <li><i class="fas fa-check"></i> Acesso das 6h às 22h</li>
-                            <li><i class="fas fa-check"></i> Aulas de grupo incluídas</li>
-                        </ul>
-                    </div>
-                    <div class="landing-plan-card">
-                        <div class="lp-icon" style="background:rgba(0,184,148,0.12);color:#00B894"><i class="fas fa-infinity"></i></div>
-                        <h3>Ilimitado 24h</h3>
-                        <div class="lp-price">45€<span>/mês</span></div>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Acesso 24/7 ilimitado</li>
-                            <li><i class="fas fa-check"></i> Todas as áreas + VIP</li>
-                            <li><i class="fas fa-check"></i> Avaliação física mensal</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Stats/Results Section -->
-        <section class="landing-section landing-stats" id="landing-stats">
-            <div class="landing-container">
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number" data-count="500">0</div>
-                        <div class="stat-suffix">€/mês</div>
-                        <div class="stat-label">Receita recuperada em média</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-count="100">0</div>
-                        <div class="stat-suffix">%</div>
-                        <div class="stat-label">Controlo de quem entra e sai</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-count="30">0</div>
-                        <div class="stat-suffix">%</div>
-                        <div class="stat-label">Menos churn com alertas proativos</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-count="0">0</div>
-                        <div class="stat-suffix">min</div>
-                        <div class="stat-label">Tempo de gestão manual eliminado</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Final -->
-        <section class="landing-section landing-cta" id="landing-cta">
-            <div class="landing-container">
-                <div class="cta-box">
-                    <h2>Pronto para automatizar o seu ginásio?</h2>
-                    <p>Veja o sistema a funcionar agora mesmo. Demo 100% funcional.</p>
-                    <button class="btn btn-primary btn-xl" id="btn-cta-demo">
-                        <i class="fas fa-rocket"></i> Experimentar Demo Agora
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="landing-footer">
-            <div class="landing-container">
-                <div class="footer-inner">
-                    <div class="footer-brand">
-                        <div class="landing-nav-logo"><i class="fas fa-dumbbell"></i></div>
-                        <span>EVO <strong>GYM</strong></span>
-                    </div>
-                    <p>Sistema de gestão inteligente para ginásios 24h. Demo funcional.</p>
-                    <div class="footer-links">
-                        <a href="#landing-features">Funcionalidades</a>
-                        <a href="#landing-problems">Problemas</a>
-                        <a href="#landing-plans-section">Planos</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-    </div>
-
     <!-- ======================== LOGIN SCREEN ======================== -->
-    <div id="login-screen" class="login-screen hidden">
-        <button class="btn-back-landing" id="btn-back-landing" title="Voltar à Landing Page">
-            <i class="fas fa-arrow-left"></i> Voltar
-        </button>
+    <div id="login-screen" class="login-screen">
         <div class="login-container">
             <div class="login-brand">
                 <div class="login-logo">
@@ -448,10 +110,6 @@
                     <p id="page-date"></p>
                 </div>
                 <div class="topbar-actions">
-                    <div class="topbar-capacity" id="topbar-capacity" title="Ocupação atual">
-                        <i class="fas fa-people-group"></i>
-                        <span id="capacity-display">0 / 30</span>
-                    </div>
                     <div class="topbar-alert-badge" id="topbar-alert-badge" title="Alertas pendentes">
                         <i class="fas fa-bell"></i>
                         <span class="badge" id="alert-count">0</span>
@@ -502,13 +160,6 @@
                         <div class="kpi-info">
                             <span class="kpi-value" id="kpi-val-receita">0€</span>
                             <span class="kpi-label">Receita Mensal</span>
-                        </div>
-                    </div>
-                    <div class="kpi-card" id="kpi-capacity">
-                        <div class="kpi-icon teal"><i class="fas fa-people-group"></i></div>
-                        <div class="kpi-info">
-                            <span class="kpi-value" id="kpi-val-capacity">0/30</span>
-                            <span class="kpi-label">Ocupação Atual</span>
                         </div>
                     </div>
                 </div>
@@ -589,10 +240,6 @@
             <section id="section-acessos" class="section">
                 <div class="section-header">
                     <h2><i class="fas fa-door-open"></i> Controlo de Acesso</h2>
-                    <div class="capacity-indicator" id="capacity-indicator">
-                        <i class="fas fa-people-group"></i>
-                        <span>Ocupação: <strong id="access-capacity-val">0</strong> / 30</span>
-                    </div>
                 </div>
 
                 <div class="access-control-container">
@@ -736,7 +383,6 @@
                                 <th>Cliente</th>
                                 <th>ID</th>
                                 <th>Status</th>
-                                <th>Motivo</th>
                             </tr>
                         </thead>
                         <tbody id="tbody-historico">
@@ -766,10 +412,6 @@
                 <div class="form-group">
                     <label for="cliente-email">Email</label>
                     <input type="email" id="cliente-email" placeholder="email@exemplo.pt" required>
-                </div>
-                <div class="form-group">
-                    <label for="cliente-telefone">Telefone</label>
-                    <input type="text" id="cliente-telefone" placeholder="912 345 678">
                 </div>
                 <div class="form-group">
                     <label for="cliente-plano">Plano</label>
