@@ -418,6 +418,10 @@
                     <i class="fas fa-tags"></i>
                     <span>Planos</span>
                 </a>
+                <a href="#" class="nav-link" data-section="planos-treino" id="nav-planos-treino">
+                    <i class="fas fa-clipboard-list"></i>
+                    <span>Planos de Treino</span>
+                </a>
                 <a href="#" class="nav-link" data-section="vendas" id="nav-vendas">
                     <i class="fas fa-euro-sign"></i>
                     <span>Vendas / Receita</span>
@@ -546,6 +550,20 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Treino Plans Widget -->
+                    <div class="card card-treino-widget">
+                        <div class="card-header" style="display:flex;align-items:center;justify-content:space-between">
+                            <h3><i class="fas fa-clipboard-list"></i> Planos de Treino — Resumo</h3>
+                            <button class="btn btn-secondary btn-sm" onclick="navigateToSection('planos-treino')">
+                                <i class="fas fa-arrow-right"></i> Ver Todos
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div id="dashboard-treino-widget">
+                                <!-- filled by JS -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -657,6 +675,56 @@
                             <button class="btn btn-primary" id="btn-assign-plan">
                                 <i class="fas fa-check"></i> Atribuir Plano
                             </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================== SECTION: PLANOS DE TREINO ======================== -->
+            <section id="section-planos-treino" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-clipboard-list"></i> Planos de Treino</h2>
+                </div>
+
+                <!-- Muscle group plan cards -->
+                <div class="plans-grid" id="treino-plans-grid">
+                    <!-- filled by JS -->
+                </div>
+
+                <!-- Assign training plan to client -->
+                <div class="card mt-2">
+                    <div class="card-header">
+                        <h3><i class="fas fa-user-tag"></i> Atribuir Plano de Treino a Cliente</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="assign-plan-form">
+                            <div class="form-group">
+                                <label>Cliente</label>
+                                <select id="assign-treino-client-select">
+                                    <option value="">Selecionar cliente...</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Plano de Treino</label>
+                                <select id="assign-treino-plan-select">
+                                    <option value="">Selecionar plano...</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary" id="btn-assign-treino-plan">
+                                <i class="fas fa-check"></i> Atribuir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client training plans overview -->
+                <div class="card mt-2">
+                    <div class="card-header">
+                        <h3><i class="fas fa-users"></i> Planos Atribuídos por Cliente</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="client-treino-plans-list">
+                            <!-- filled by JS -->
                         </div>
                     </div>
                 </div>
@@ -795,6 +863,18 @@
                     </button>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <!-- Training Plan Detail Modal -->
+    <div class="modal-overlay hidden" id="modal-treino-plan">
+        <div class="modal modal-lg">
+            <div class="modal-header">
+                <h3 id="modal-treino-title">Plano de Treino</h3>
+                <button class="modal-close" id="modal-treino-close">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-treino-body">
+            </div>
         </div>
     </div>
 

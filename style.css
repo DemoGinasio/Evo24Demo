@@ -755,12 +755,100 @@ input::placeholder {
 
 .card-alerts {
     grid-column: 2;
-    grid-row: 1 / 3;
+    grid-row: 1 / 4;
 }
 
 .card-recent {
     grid-column: 1;
     grid-row: 2;
+}
+
+.card-treino-widget {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+/* ————— Dashboard Treino Widget ————— */
+.treino-widget-stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.treino-widget-stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--gray-50);
+    border-radius: var(--radius-sm);
+    padding: 0.7rem 0.5rem;
+}
+
+.treino-widget-val {
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.treino-widget-label {
+    font-size: 0.72rem;
+    color: var(--gray-400);
+    font-weight: 500;
+    margin-top: 0.2rem;
+    text-align: center;
+}
+
+.treino-widget-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem;
+}
+
+.treino-widget-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 0.7rem;
+    border-radius: var(--radius-sm);
+    background: var(--gray-50);
+    border: 1px solid var(--gray-100);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.treino-widget-item:hover {
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-1px);
+}
+
+.treino-widget-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.treino-widget-name {
+    flex: 1;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--gray-700);
+    line-height: 1.2;
+}
+
+.treino-widget-count {
+    font-size: 0.82rem;
+    font-weight: 800;
+    min-width: 18px;
+    text-align: right;
 }
 
 /* ————— Alerts List ————— */
@@ -1377,6 +1465,10 @@ input::placeholder {
         grid-column: 1;
         grid-row: auto;
     }
+    .card-treino-widget {
+        grid-column: 1;
+        grid-row: auto;
+    }
     .access-control-container {
         grid-template-columns: 1fr;
     }
@@ -1416,6 +1508,114 @@ input::placeholder {
     .login-container {
         padding: 2rem 1.5rem;
     }
+}
+
+/* ============================================================
+   PLANOS DE TREINO
+   ============================================================ */
+.modal.modal-lg {
+    max-width: 700px;
+}
+
+.treino-exercises-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.treino-exercises-table th {
+    padding: 0.7rem 1rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-100);
+    background: var(--gray-50);
+}
+
+.treino-exercises-table td {
+    padding: 0.75rem 1rem;
+    font-size: 0.83rem;
+    color: var(--gray-600);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.treino-exercises-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.treino-exercises-table tbody tr:hover {
+    background: var(--gray-50);
+}
+
+/* Client treino assignment list */
+.client-treino-item {
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius-sm);
+    background: var(--gray-50);
+    margin-bottom: 0.6rem;
+    border: 1px solid var(--gray-100);
+    transition: var(--transition-fast);
+}
+
+.client-treino-item:last-child {
+    margin-bottom: 0;
+}
+
+.client-treino-item:hover {
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+.client-treino-plans {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+.treino-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.55rem;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.treino-tag i {
+    font-size: 0.65rem;
+}
+
+.treino-tag-remove {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    line-height: 1;
+    padding: 0;
+    margin-left: 0.1rem;
+    opacity: 0.6;
+    transition: var(--transition-fast);
+    color: inherit;
+}
+
+.treino-tag-remove:hover {
+    opacity: 1;
+}
+
+.treino-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: var(--primary-bg);
+    color: var(--primary);
 }
 
 /* ============================================================

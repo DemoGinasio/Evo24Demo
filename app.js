@@ -56,6 +56,103 @@ const PLANOS = [
     }
 ];
 
+const PLANOS_TREINO = [
+    {
+        id: 'treino-costas',
+        nome: 'Costas',
+        icon: 'fas fa-dumbbell',
+        color: '#6C5CE7',
+        descricao: 'Desenvolvimento completo das costas e grande dorsal',
+        exercicios: [
+            { nome: 'Puxada à frente', series: 4, reps: '10-12', descanso: '90s', notas: 'Pegada larga, foco no grande dorsal' },
+            { nome: 'Remada curvada com barra', series: 4, reps: '8-10', descanso: '90s', notas: 'Manter costas neutras, cotovelos junto ao corpo' },
+            { nome: 'Remada unilateral com haltere', series: 3, reps: '10-12', descanso: '60s', notas: 'Apoiar no banco, rotação do torso controlada' },
+            { nome: 'Puxada pegada neutra', series: 3, reps: '10-12', descanso: '60s', notas: 'Variação para ativação do bíceps longo' },
+            { nome: 'Hiperextensão lombar', series: 3, reps: '15', descanso: '60s', notas: 'Não hiperestender a lombar, movimento controlado' }
+        ]
+    },
+    {
+        id: 'treino-biceps',
+        nome: 'Bíceps',
+        icon: 'fas fa-hand-rock',
+        color: '#74B9FF',
+        descricao: 'Hipertrofia e definição dos bíceps',
+        exercicios: [
+            { nome: 'Curl bíceps com barra', series: 4, reps: '10-12', descanso: '60s', notas: 'Cotovelos fixos, não balançar o corpo' },
+            { nome: 'Curl alternado com halteres', series: 3, reps: '10-12', descanso: '60s', notas: 'Supinar o punho no topo do movimento' },
+            { nome: 'Curl concentrado', series: 3, reps: '12', descanso: '45s', notas: 'Isolamento máximo, cotovelo contra a coxa' },
+            { nome: 'Curl martelo (Hammer Curl)', series: 3, reps: '12', descanso: '45s', notas: 'Trabalha bíceps braquial e braquiorradial' }
+        ]
+    },
+    {
+        id: 'treino-triceps',
+        nome: 'Tríceps',
+        icon: 'fas fa-bolt',
+        color: '#E17055',
+        descricao: 'Desenvolvimento e definição dos tríceps',
+        exercicios: [
+            { nome: 'Tríceps no pulley (corda)', series: 4, reps: '12-15', descanso: '60s', notas: 'Abrir as mãos no ponto mais baixo' },
+            { nome: 'Extensão francesa com barra', series: 3, reps: '10', descanso: '75s', notas: 'Skull crushers, não flectir os cotovelos para fora' },
+            { nome: 'Tríceps banco (fundos)', series: 3, reps: '12-15', descanso: '60s', notas: 'Corpo próximo ao banco, cotovelos alinhados' },
+            { nome: 'Extensão overhead com haltere', series: 3, reps: '12', descanso: '60s', notas: 'Cabeça longa do tríceps, cotovelos apontados ao teto' }
+        ]
+    },
+    {
+        id: 'treino-peito',
+        nome: 'Peito',
+        icon: 'fas fa-shield-heart',
+        color: '#00B894',
+        descricao: 'Desenvolvimento do peitoral maior e menor',
+        exercicios: [
+            { nome: 'Supino reto com barra', series: 4, reps: '8-10', descanso: '90s', notas: 'Omoplatas travadas, descida controlada até ao peito' },
+            { nome: 'Supino inclinado com halteres', series: 3, reps: '10-12', descanso: '75s', notas: '30-45° de inclinação, foco na porção clavicular' },
+            { nome: 'Crucifixo com halteres', series: 3, reps: '12', descanso: '60s', notas: 'Ligeira flexão dos cotovelos, não descer abaixo do plano' },
+            { nome: 'Peck deck / Fly na máquina', series: 3, reps: '12-15', descanso: '60s', notas: 'Contração máxima no centro, movimento em arco' }
+        ]
+    },
+    {
+        id: 'treino-ombros',
+        nome: 'Ombros',
+        icon: 'fas fa-arrows-up-down',
+        color: '#FDCB6E',
+        descricao: 'Volume e definição do deltóide',
+        exercicios: [
+            { nome: 'Desenvolvimento militar com barra', series: 4, reps: '8-10', descanso: '90s', notas: 'Core ativado, não arquear a lombar' },
+            { nome: 'Elevação lateral com halteres', series: 4, reps: '12-15', descanso: '60s', notas: 'Ligeiro tilt para frente, cotovelo ligeiramente adiantado' },
+            { nome: 'Elevação frontal com haltere', series: 3, reps: '12', descanso: '60s', notas: 'Alternado, não passar o nível dos ombros' },
+            { nome: 'Encolhimento com halteres', series: 3, reps: '15', descanso: '45s', notas: 'Movimento puramente vertical, sem rotação' }
+        ]
+    },
+    {
+        id: 'treino-pernas',
+        nome: 'Pernas',
+        icon: 'fas fa-person-running',
+        color: '#A29BFE',
+        descricao: 'Força e hipertrofia dos membros inferiores',
+        exercicios: [
+            { nome: 'Agachamento livre', series: 4, reps: '10', descanso: '120s', notas: 'Joelhos alinhados com os pés, descer abaixo do paralelo' },
+            { nome: 'Leg press 45°', series: 4, reps: '12', descanso: '90s', notas: 'Pés à largura dos ombros, joelhos não ultrapassar os pés' },
+            { nome: 'Cadeira extensora', series: 3, reps: '12-15', descanso: '60s', notas: 'Isolamento do quadricípite, contração no topo' },
+            { nome: 'Mesa flexora', series: 3, reps: '12', descanso: '60s', notas: 'Isquiotibiais, não elevar os glúteos da mesa' },
+            { nome: 'Panturrilha em pé', series: 4, reps: '20', descanso: '45s', notas: 'Amplitude máxima, descida lenta para alongamento' }
+        ]
+    },
+    {
+        id: 'treino-abdominais',
+        nome: 'Abdominais',
+        icon: 'fas fa-table-list',
+        color: '#FD7272',
+        descricao: 'Core e definição abdominal',
+        exercicios: [
+            { nome: 'Crunch abdominal', series: 4, reps: '20', descanso: '45s', notas: 'Não puxar o pescoço, contração abdominal no topo' },
+            { nome: 'Prancha isométrica', series: 4, reps: '45-60s', descanso: '45s', notas: 'Corpo alinhado, core totalmente contraído' },
+            { nome: 'Russian twist', series: 3, reps: '20', descanso: '45s', notas: 'Com ou sem peso, rotação controlada do torso' },
+            { nome: 'Elevação de pernas', series: 3, reps: '15', descanso: '45s', notas: 'Pernas retas ou ligeiramente fletidas, não balançar' },
+            { nome: 'Bicicleta', series: 3, reps: '20', descanso: '45s', notas: 'Alternado cotovelo-joelho oposto, movimento lento' }
+        ]
+    }
+];
+
 // Default clients for demo
 const DEFAULT_CLIENTES = [
     { id: 'C001', nome: 'Ricardo Silva', email: 'ricardo@email.pt', plano: 'plano-24h', estado: 'ativo', validade: getFutureDate(45) },
@@ -211,6 +308,18 @@ function getClienteById(clienteId) {
     return getClientes().find(c => c.id === clienteId);
 }
 
+function getPlanosClienteTreino() {
+    return load('planos_treino_clientes') || {};
+}
+
+function setPlanosClienteTreino(data) {
+    save('planos_treino_clientes', data);
+}
+
+function getPlanoTreinoById(planoId) {
+    return PLANOS_TREINO.find(p => p.id === planoId);
+}
+
 // ————— INITIALIZE APP —————
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -284,6 +393,12 @@ function setupEventListeners() {
     
     // Plan assignment
     document.getElementById('btn-assign-plan').addEventListener('click', handleAssignPlan);
+    
+    // Treino plan assignment
+    document.getElementById('btn-assign-treino-plan').addEventListener('click', handleAssignPlanoTreino);
+    document.getElementById('modal-treino-close').addEventListener('click', () => {
+        document.getElementById('modal-treino-plan').classList.add('hidden');
+    });
     
     // Payments
     document.getElementById('btn-registar-pagamento').addEventListener('click', () => openPagamentoModal());
@@ -388,6 +503,7 @@ function navigateToSection(section) {
         clientes: 'Gestão de Clientes',
         acessos: 'Controlo de Acesso',
         planos: 'Planos de Subscrição',
+        'planos-treino': 'Planos de Treino',
         vendas: 'Vendas / Receita',
         historico: 'Histórico de Acessos'
     };
@@ -402,6 +518,7 @@ function navigateToSection(section) {
         case 'clientes': renderClientes(); break;
         case 'acessos': renderAccessControl(); break;
         case 'planos': renderPlanos(); break;
+        case 'planos-treino': renderPlanosTreino(); break;
         case 'vendas': renderVendas(); break;
         case 'historico': renderHistorico('hoje'); break;
     }
@@ -450,6 +567,9 @@ function loadDashboard() {
     
     // Chart
     renderEntriesChart(historico);
+
+    // Treino widget
+    renderDashboardTreinoWidget(clientes);
 }
 
 function animateValue(elementId, target) {
@@ -534,6 +654,48 @@ function renderDashboardAlerts(clientes, historico) {
             <span>${a.message}</span>
         </div>
     `).join('');
+}
+
+function renderDashboardTreinoWidget(clientes) {
+    const container = document.getElementById('dashboard-treino-widget');
+    const planosClientes = getPlanosClienteTreino();
+
+    // Count per muscle group
+    const countByPlan = {};
+    PLANOS_TREINO.forEach(p => { countByPlan[p.id] = 0; });
+    Object.values(planosClientes).forEach(arr => {
+        arr.forEach(pid => { if (countByPlan[pid] !== undefined) countByPlan[pid]++; });
+    });
+
+    const totalComTreino = Object.keys(planosClientes).filter(cid =>
+        planosClientes[cid] && planosClientes[cid].length > 0
+    ).length;
+    const totalSemTreino = clientes.filter(c => c.estado === 'ativo' && !planosClientes[c.id]?.length).length;
+
+    container.innerHTML = `
+        <div class="treino-widget-stats">
+            <div class="treino-widget-stat">
+                <span class="treino-widget-val" style="color:var(--primary)">${totalComTreino}</span>
+                <span class="treino-widget-label">Clientes com plano</span>
+            </div>
+            <div class="treino-widget-stat">
+                <span class="treino-widget-val" style="color:var(--danger)">${totalSemTreino}</span>
+                <span class="treino-widget-label">Ativos sem plano</span>
+            </div>
+            <div class="treino-widget-stat">
+                <span class="treino-widget-val" style="color:var(--success)">${PLANOS_TREINO.length}</span>
+                <span class="treino-widget-label">Grupos musculares</span>
+            </div>
+        </div>
+        <div class="treino-widget-grid">
+            ${PLANOS_TREINO.map(p => `
+            <div class="treino-widget-item" onclick="navigateToSection('planos-treino')" title="Ver ${p.nome}">
+                <span class="treino-widget-icon" style="background:${p.color}15;color:${p.color}"><i class="${p.icon}"></i></span>
+                <span class="treino-widget-name">${p.nome}</span>
+                <span class="treino-widget-count" style="color:${p.color}">${countByPlan[p.id]}</span>
+            </div>`).join('')}
+        </div>
+    `;
 }
 
 function renderRecentAccess(historico) {
@@ -1046,6 +1208,174 @@ function handleAssignPlan() {
     });
     
     renderPlanos();
+}
+
+// ============================================================
+// PLANOS DE TREINO
+// ============================================================
+
+function renderPlanosTreino() {
+    const grid = document.getElementById('treino-plans-grid');
+    const planosClientes = getPlanosClienteTreino();
+
+    grid.innerHTML = PLANOS_TREINO.map(p => {
+        const clientCount = Object.values(planosClientes).filter(arr => arr.includes(p.id)).length;
+        return `
+        <div class="plan-card">
+            <div class="plan-icon" style="background:${p.color}15;color:${p.color}">
+                <i class="${p.icon}"></i>
+            </div>
+            <h3>${p.nome}</h3>
+            <p style="font-size:0.8rem;color:var(--gray-400);margin-bottom:0.8rem">${p.descricao}</p>
+            <ul class="plan-features">
+                ${p.exercicios.map(e => `<li><i class="fas fa-check"></i>${e.nome} <span style="color:var(--gray-300);font-size:0.75rem">${e.series}x${e.reps}</span></li>`).join('')}
+            </ul>
+            <div class="plan-clients-count">
+                <strong>${clientCount}</strong> cliente${clientCount !== 1 ? 's' : ''} com este plano
+            </div>
+            <button class="btn btn-secondary btn-sm" style="width:100%;margin-top:0.8rem;justify-content:center" onclick="openPlanoTreinoModal('${p.id}')">
+                <i class="fas fa-eye"></i> Ver Exercícios
+            </button>
+        </div>`;
+    }).join('');
+
+    populateTreinoAssignDropdowns();
+    renderClientTreinoPlans();
+}
+
+function openPlanoTreinoModal(planoId) {
+    const plano = getPlanoTreinoById(planoId);
+    if (!plano) return;
+
+    document.getElementById('modal-treino-title').innerHTML =
+        `<span style="color:${plano.color}"><i class="${plano.icon}"></i></span> ${plano.nome}`;
+
+    document.getElementById('modal-treino-body').innerHTML = `
+        <p style="font-size:0.85rem;color:var(--gray-400);margin-bottom:1.2rem">${plano.descricao}</p>
+        <div class="table-container">
+            <table class="treino-exercises-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Exercício</th>
+                        <th>Séries</th>
+                        <th>Reps</th>
+                        <th>Descanso</th>
+                        <th>Notas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${plano.exercicios.map((e, i) => `
+                    <tr>
+                        <td style="color:var(--gray-300);font-weight:700">${i + 1}</td>
+                        <td><strong>${e.nome}</strong></td>
+                        <td><span class="treino-badge">${e.series}</span></td>
+                        <td><span class="treino-badge">${e.reps}</span></td>
+                        <td style="color:var(--gray-500)">${e.descanso}</td>
+                        <td style="font-size:0.78rem;color:var(--gray-400)">${e.notas}</td>
+                    </tr>`).join('')}
+                </tbody>
+            </table>
+        </div>`;
+
+    document.getElementById('modal-treino-plan').classList.remove('hidden');
+}
+
+function populateTreinoAssignDropdowns() {
+    const clientSelect = document.getElementById('assign-treino-client-select');
+    const planSelect = document.getElementById('assign-treino-plan-select');
+    const clientes = getClientes();
+
+    clientSelect.innerHTML = '<option value="">Selecionar cliente...</option>';
+    clientes.forEach(c => {
+        clientSelect.innerHTML += `<option value="${c.id}">${c.nome} (${c.id})</option>`;
+    });
+
+    planSelect.innerHTML = '<option value="">Selecionar plano...</option>';
+    PLANOS_TREINO.forEach(p => {
+        planSelect.innerHTML += `<option value="${p.id}">${p.nome}</option>`;
+    });
+}
+
+function handleAssignPlanoTreino() {
+    const clientId = document.getElementById('assign-treino-client-select').value;
+    const planId = document.getElementById('assign-treino-plan-select').value;
+
+    if (!clientId || !planId) {
+        Swal.fire({ icon: 'warning', title: 'Campos em falta', text: 'Selecione um cliente e um plano de treino.', background: '#fff' });
+        return;
+    }
+
+    const planosClientes = getPlanosClienteTreino();
+    if (!planosClientes[clientId]) planosClientes[clientId] = [];
+
+    if (planosClientes[clientId].includes(planId)) {
+        Swal.fire({ icon: 'info', title: 'Já atribuído', text: 'Este cliente já tem este plano de treino.', background: '#fff' });
+        return;
+    }
+
+    planosClientes[clientId].push(planId);
+    setPlanosClienteTreino(planosClientes);
+
+    const cliente = getClienteById(clientId);
+    const plano = getPlanoTreinoById(planId);
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Plano Atribuído!',
+        html: `<strong>${cliente.nome}</strong> recebeu o plano de treino <strong>${plano.nome}</strong>.`,
+        timer: 2000,
+        showConfirmButton: false,
+        background: '#fff'
+    });
+
+    renderPlanosTreino();
+}
+
+function removeClienteTreino(clienteId, planoId) {
+    const planosClientes = getPlanosClienteTreino();
+    if (planosClientes[clienteId]) {
+        planosClientes[clienteId] = planosClientes[clienteId].filter(id => id !== planoId);
+        if (planosClientes[clienteId].length === 0) delete planosClientes[clienteId];
+        setPlanosClienteTreino(planosClientes);
+        renderClientTreinoPlans();
+        renderPlanosTreino();
+    }
+}
+
+function renderClientTreinoPlans() {
+    const container = document.getElementById('client-treino-plans-list');
+    const planosClientes = getPlanosClienteTreino();
+    const clientes = getClientes();
+
+    const entries = Object.entries(planosClientes).filter(([, arr]) => arr.length > 0);
+
+    if (entries.length === 0) {
+        container.innerHTML = '<div class="empty-state"><i class="fas fa-clipboard-list"></i><p>Nenhum plano de treino atribuído ainda</p></div>';
+        return;
+    }
+
+    container.innerHTML = entries.map(([clienteId, planoIds]) => {
+        const cliente = clientes.find(c => c.id === clienteId);
+        if (!cliente) return '';
+        return `
+        <div class="client-treino-item">
+            <div>
+                <div style="font-weight:600;font-size:0.9rem;color:var(--gray-700)">${cliente.nome}</div>
+                <div style="font-size:0.75rem;color:var(--gray-400)">${cliente.id}</div>
+                <div class="client-treino-plans">
+                    ${planoIds.map(pid => {
+                        const p = getPlanoTreinoById(pid);
+                        if (!p) return '';
+                        return `<span class="treino-tag" style="background:${p.color}15;color:${p.color}">
+                            <i class="${p.icon}"></i> ${p.nome}
+                            <button class="treino-tag-remove" onclick="removeClienteTreino('${clienteId}','${pid}')" title="Remover">&times;</button>
+                        </span>`;
+                    }).join('')}
+                </div>
+            </div>
+        </div>`;
+    }).join('');
 }
 
 // ============================================================
